@@ -4,7 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Khaled Omrani</title>
+    <title>Khaled Omrani - Portfolio</title>
+    
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
@@ -12,134 +18,155 @@
 </head>
 
 <body>
+    <!-- Background Elements -->
+    <div class="bg-shape bg-shape-1"></div>
+    <div class="bg-shape bg-shape-2"></div>
+
     <header class="header">
         <a href="#" class="logo"><span>Khaled Omrani</span></a>
         <nav class="navbar">
             <ul class="nav-links">
-                <li><a href="#">About</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
         <i class="fa-solid fa-bars" id="menu-icon"></i>
-        <a href="https://github.com/khaled2942"><button class="visit-btn">Visit Github</button></a>
+        <a href="https://github.com/khaled2942" class="visit-btn-link"><button class="visit-btn">Visit Github</button></a>
     </header>
+
     <section id="about" class="about">
-        <div class="about-container">
-            <img src="img\icon2.jpeg"  alt="">
+        <div class="about-container reveal">
             <div class="info-box">
                 <div class="text"> 
-                    <h3>Hi, I'm</h3>
-                    <h1>Khaled Omrani</h1>
-                    <span>Frontend Developer</span>
+                    <h3 class="subtitle">Hi, I'm</h3>
+                    <h1 class="title">Khaled Omrani</h1>
+                    <span class="role">Frontend Developer</span>
                 </div>
                 <div class="btn-group">
-                    <div class="btn">Download CV</div>
-                    <div class="btn">Contact</div>
+                    <a href="#" class="btn btn-primary">Download CV</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
                 </div>
                 <div class="socials">
                     <a href="https://github.com/khaled2942"><i class="fa-brands fa-github"></i></a>
                     <a href="https://www.linkedin.com/in/khaled-omrani-004190349/"><i class="fa-brands fa-linkedin-in" ></i></a>
                 </div>
             </div>
+            <div class="image-box">
+                <img src="img/icon2.jpeg" alt="Khaled Omrani">
+            </div>
         </div>
     </section>
+
     <section id="skills" class="skills">
-        <h2 class="section-title">Skills</h2>
-        <div class="skill-info">
+        <h2 class="section-title reveal">My <span>Skills</span></h2>
+        <div class="skill-info reveal">
             <div class="grid">
                 <div class="grid-card">
                     <i class="fa-solid fa-code"></i>
-                    <span>Skill1</span>
-                    <h3>Title</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia, dicta.</p>
+                    <span>Skill 1</span>
+                    <h3>Web Development</h3>
+                    <p>Building responsive and modern user interfaces using the latest web technologies.</p>
                 </div>
                 <div class="grid-card">
                     <i class="fa-solid fa-file-code"></i>
-                    <span>Skill2</span>
-                    <h3>Title</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia, dicta.</p>
+                    <span>Skill 2</span>
+                    <h3>UI/UX Design</h3>
+                    <p>Creating intuitive and stunning designs focused on user experience.</p>
                 </div>
                 <div class="grid-card">
                     <i class="fa-solid fa-laptop"></i>
-                    <span>Skill3</span>
-                    <h3>Title</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia, dicta.</p>
+                    <span>Skill 3</span>
+                    <h3>Responsive Design</h3>
+                    <p>Ensuring websites look great on all devices, from mobile phones to large desktops.</p>
                 </div>
                 <div class="grid-card">
                     <i class="fa-solid fa-list"></i>
-                    <span>Skill4</span>
-                    <h3>Title</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia, dicta.</p>
+                    <span>Skill 4</span>
+                    <h3>Version Control</h3>
+                    <p>Using Git and GitHub for efficient project management and collaboration.</p>
                 </div>
             </div>
         </div>
     </section>
+
     <section id="projects" class="projects">
-        <h2 class="section-title">Recent Projects</h2>
-        <div class="projects-grid">
+        <h2 class="section-title reveal">Recent <span>Projects</span></h2>
+        <div class="projects-grid reveal">
             <div class="project-card">
-                <img src="img\project1.webp" alt="">
-                <h3>Project X</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, sequi?</p>
-                <div class="btn-group">
-                    <div class="btn">Live Demo</div>
-                    <div class="btn">Github Repo</div>
+                <div class="img-wrapper">
+                    <img src="img/project1.webp" alt="Project X">
+                </div>
+                <div class="project-content">
+                    <h3>Project X</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, sequi?</p>
+                    <div class="btn-group">
+                        <a href="#" class="btn btn-primary">Live Demo</a>
+                        <a href="#" class="btn btn-secondary">Github Repo</a>
+                    </div>
                 </div>
             </div>
             <div class="project-card">
-                <img src="img\project2.webp" alt="">
-                <h3>Project Y</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, sequi?</p>
-                <div class="btn-group">
-                    <div class="btn">Live Demo</div>
-                    <div class="btn">Github Repo</div>
+                <div class="img-wrapper">
+                    <img src="img/project2.webp" alt="Project Y">
+                </div>
+                <div class="project-content">
+                    <h3>Project Y</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, sequi?</p>
+                    <div class="btn-group">
+                        <a href="#" class="btn btn-primary">Live Demo</a>
+                        <a href="#" class="btn btn-secondary">Github Repo</a>
+                    </div>
                 </div>
             </div>
             <div class="project-card">
-                <img src="img\project3.webp" alt="">
-                <h3>Project Z</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, sequi?</p>
-                <div class="btn-group">
-                    <div class="btn">Live Demo</div>
-                    <div class="btn">Github Repo</div>
+                <div class="img-wrapper">
+                    <img src="img/project3.webp" alt="Project Z">
+                </div>
+                <div class="project-content">
+                    <h3>Project Z</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, sequi?</p>
+                    <div class="btn-group">
+                        <a href="#" class="btn btn-primary">Live Demo</a>
+                        <a href="#" class="btn btn-secondary">Github Repo</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="contact" class="contact">
-        <div class="input-box">
-            <h2 class="section-title">Contact Me</h2>
-            <div class="input">
-                <input type="text" placeholder="example@email.com">
-                <i class="fa-solid fa-envelope"></i>
-            </div>
-            <div class="btn">Submit</div>
+        <div class="input-box reveal">
+            <h2 class="section-title">Contact <span>Me</span></h2>
+            <form action="#">
+                <div class="input">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" placeholder="example@email.com" required>
+                </div>
+                <button type="submit" class="btn btn-primary submit-btn">Send Message</button>
+            </form>
         </div>
     </section>
-    <footer>
-        <ul>
-            <li>
-                <a href="#about">About</a>
-            </li>
-            <li>
-                <a href="#skills">Skills</a>
-            </li>
-            <li>
-                <a href="#projects">Projects</a>
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
-        </ul>
-        <p class="copyright">&copy All Rights Reserved | Khaled Omrani</p>
 
+    <footer>
+        <div class="footer-content">
+            <a href="#" class="logo"><span>Khaled Omrani</span></a>
+            <ul class="footer-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="socials">
+                <a href="https://github.com/khaled2942"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/khaled-omrani-004190349/"><i class="fa-brands fa-linkedin-in" ></i></a>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2026 All Rights Reserved | Khaled Omrani</p>
     </footer>
 
     <script src="js/file.js"></script>
-
 </body>
-
 
 </html>
