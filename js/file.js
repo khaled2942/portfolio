@@ -1,55 +1,58 @@
-// Mobile Menu Toggle
-const menuIcon = document.querySelector('#menu-icon');
-const navLinks = document.querySelector('.nav-links');
+/* toggle icon navbar */
+let menuIcon = document.querySelector('#menu-icon');
+let navbar = document.querySelector('.navbar');
 
-menuIcon.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    
-    // Toggle icon between bars and xmark
-    if(navLinks.classList.contains('active')) {
-        menuIcon.classList.remove('fa-bars');
-        menuIcon.classList.add('fa-xmark');
-    } else {
-        menuIcon.classList.remove('fa-xmark');
-        menuIcon.classList.add('fa-bars');
-    }
-});
+menuIcon.onclick = () => {
+    menuIcon.classList.toggle('bx-x');
+    navbar.classList.toggle('active');
+};
 
-// Close menu when clicking a link
-document.querySelectorAll('.nav-links li a').forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        menuIcon.classList.remove('fa-xmark');
-        menuIcon.classList.add('fa-bars');
+/* scroll sections active link */
+let sections = document.querySelectorAll('section');
+let navLinks = document.querySelectorAll('header nav a');
+
+window.onscroll = () => {
+    sections.forEach(sec => {
+        let top = window.scrollY;
+        let offset = sec.offsetTop - 150;
+        let height = sec.offsetHeight;
+        let id = sec.getAttribute('id');
+
+        if(top >= offset && top < offset + height) {
+            navLinks.forEach(links => {
+                links.classList.remove('active');
+                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+            });
+        };
     });
+
+    /* sticky navbar */
+    let header = document.querySelector('header');
+    header.classList.toggle('sticky', window.scrollY > 100);
+
+    /* remove toggle icon and navbar when click navbar link (scroll) */
+    menuIcon.classList.remove('bx-x');
+    navbar.classList.remove('active');
+};
+
+/* scroll reveal */
+ScrollReveal({
+    // reset: true,
+    distance: '80px',
+    duration: 2000,
+    delay: 200
 });
 
-// Sticky Header on Scroll
-const header = document.querySelector('.header');
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
-});
+ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
+ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact form', { origin: 'bottom' });
+ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
+ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 
-// Scroll Reveal Animations using Intersection Observer
-const revealElements = document.querySelectorAll('.reveal');
-
-const revealObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-            observer.unobserve(entry.target); // Only animate once
-        }
-    });
-}, {
-    root: null,
-    threshold: 0.15,
-    rootMargin: "0px 0px -50px 0px"
-});
-
-revealElements.forEach(el => {
-    revealObserver.observe(el);
+/* typed js */
+const typed = new Typed('.multiple-text', {
+    strings: ['Frontend Developer', 'UI/UX Designer', 'Web Developer'],
+    typeSpeed: 100,
+    backSpeed: 100,
+    backDelay: 1000,
+    loop: true
 });
