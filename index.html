@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Khaled Omrani - Portfolio</title>
+    <title data-i18n="meta.title">Khaled Omrani - Portfolio</title>
     
+    <!-- Google Fonts: Plus Jakarta Sans & Tajawal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+
     <!-- Boxicons for Icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     
@@ -20,162 +25,274 @@
         <i class='bx bx-menu' id="menu-icon"></i>
 
         <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
+            <a href="#home" class="active" data-i18n="nav.home">Home</a>
+            <a href="#about" data-i18n="nav.about">About</a>
+            <a href="#services" data-i18n="nav.services">Services</a>
+            <a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a>
+            <a href="#contact" data-i18n="nav.contact">Contact</a>
+            <button type="button" class="btn-lang" data-lang-toggle data-i18n="nav.lang">العربية</button>
         </nav>
     </header>
 
     <!-- Home Section Design -->
-    <section class="home" id="home">
+    <section class="home" id="home" data-hero-motion>
         <div class="home-content">
-            <h3>Hello, It's Me</h3>
-            <h1>Khaled Omrani</h1>
-            <h3>And I'm a <span class="multiple-text"></span></h3>
-            <p>I'm a passionate web developer with expertise in creating clean, responsive, and user-friendly websites. I enjoy bringing ideas to life in the browser.</p>
+            <h3 data-i18n="home.hello">Hello, It's Me</h3>
+            <h1 data-i18n="home.name">Khaled Omrani</h1>
+            <h3><span data-i18n="home.im">And I'm a</span> <span class="multiple-text"></span></h3>
+            <p data-i18n="home.p">I'm a passionate web developer with expertise in creating clean, responsive, and user-friendly websites. I enjoy bringing ideas to life in the browser.</p>
             
             <div class="social-media">
-                <a href="https://github.com/khaled2942" target="_blank"><i class='bx bxl-github'></i></a>
-                <a href="https://www.linkedin.com/in/khaled-omrani-004190349/" target="_blank"><i class='bx bxl-linkedin'></i></a>
-                <a href="#"><i class='bx bxl-twitter' ></i></a>
-                <a href="#"><i class='bx bxl-instagram-alt' ></i></a>
+                <a href="https://github.com/khaled2942" target="_blank" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/khaled-omrani-004190349/" target="_blank" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                <a href="#" aria-label="Twitter"><i class='bx bxl-twitter' ></i></a>
+                <a href="#" aria-label="Instagram"><i class='bx bxl-instagram-alt' ></i></a>
             </div>
 
-            <a href="#" class="btn">Download CV</a>
+            <a href="#" class="btn" data-i18n="home.btn">Download CV</a>
         </div>
 
-        <div class="home-img">
+        <div class="home-img" aria-hidden="true">
             <img src="img/icon2.jpeg" alt="Khaled Omrani">
+            <span class="hero-blob hero-blob--a"></span>
+            <span class="hero-blob hero-blob--b"></span>
+            <span class="hero-blob hero-blob--c"></span>
+            <span class="hero-pill hero-pill--wide"></span>
+            <span class="hero-pill hero-pill--tall"></span>
+            <span class="hero-ring hero-ring--outer"></span>
+            <span class="hero-ring hero-ring--inner"></span>
+            <span class="hero-hex"></span>
+            <span class="hero-slab"></span>
         </div>
     </section>
 
     <!-- About Section Design -->
-    <section class="about" id="about">
+    <section class="about section--reveal" id="about">
         <div class="about-img">
             <img src="img/icon2.jpeg" alt="Khaled Omrani">
         </div>
 
         <div class="about-content">
-            <h2 class="heading">About <span>Me</span></h2>
-            <h3>Frontend Developer</h3>
-            <p>I specialize in building responsive web applications and interactive user interfaces. With a strong foundation in HTML, CSS, and JavaScript, I aim to create seamless digital experiences. My goal is to continuously learn and adopt new technologies to improve my craft and deliver high-quality solutions.</p>
-            <a href="#" class="btn">Read More</a>
+            <h2 class="heading" data-i18n="about.heading">About <span>Me</span></h2>
+            <h3 data-i18n="about.sub">Frontend Developer</h3>
+            <p data-i18n="about.p">I specialize in building responsive web applications and interactive user interfaces. With a strong foundation in HTML, CSS, and JavaScript, I aim to create seamless digital experiences. My goal is to continuously learn and adopt new technologies to improve my craft and deliver high-quality solutions.</p>
+            <a href="#" class="btn" data-i18n="about.btn">Read More</a>
         </div>
     </section>
 
     <!-- Services Section Design -->
-    <section class="services" id="services">
-        <h2 class="heading">My <span>Services</span></h2>
+    <section class="services section--reveal" id="services">
+        <h2 class="heading" data-i18n="services.heading">My <span>Services</span></h2>
 
         <div class="services-container">
             <div class="services-box">
                 <i class='bx bx-code-alt'></i>
-                <h3>Web Development</h3>
-                <p>Building responsive and modern user interfaces using the latest web technologies to ensure optimal performance and user experience.</p>
-                <a href="#" class="btn">Read More</a>
+                <h3 data-i18n="services.web.title">Web Development</h3>
+                <p data-i18n="services.web.text">Building responsive and modern user interfaces using the latest web technologies to ensure optimal performance and user experience.</p>
+                <a href="#" class="btn" data-i18n="services.web.btn">Read More</a>
             </div>
 
             <div class="services-box">
                 <i class='bx bx-crop'></i>
-                <h3>UI/UX Design</h3>
-                <p>Creating intuitive and stunning designs focused on user experience, ensuring that every interaction is meaningful and engaging.</p>
-                <a href="#" class="btn">Read More</a>
+                <h3 data-i18n="services.design.title">UI/UX Design</h3>
+                <p data-i18n="services.design.text">Creating intuitive and stunning designs focused on user experience, ensuring that every interaction is meaningful and engaging.</p>
+                <a href="#" class="btn" data-i18n="services.design.btn">Read More</a>
             </div>
 
             <div class="services-box">
                 <i class='bx bxl-apple'></i>
-                <h3>App Development</h3>
-                <p>Developing seamless and robust mobile applications that provide excellent functionality and aesthetics on multiple devices.</p>
-                <a href="#" class="btn">Read More</a>
+                <h3 data-i18n="services.app.title">App Development</h3>
+                <p data-i18n="services.app.text">Developing seamless and robust mobile applications that provide excellent functionality and aesthetics on multiple devices.</p>
+                <a href="#" class="btn" data-i18n="services.app.btn">Read More</a>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Section Design -->
-    <section class="portfolio" id="portfolio">
-        <h2 class="heading">Latest <span>Project</span></h2>
+    <!-- Portfolio Section Design (3D cards) -->
+    <section class="portfolio section--reveal" id="portfolio">
+        <h2 class="heading" data-i18n="portfolio.heading">Latest <span>Projects</span></h2>
 
         <div class="portfolio-container">
-            <div class="portfolio-box">
-                <img src="img/project1.webp" alt="Project 1">
-                <div class="portfolio-layer">
-                    <h4>Web Design</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
+            <!-- Project 1 (Orb Glass - Mint) -->
+            <div class="ux-parent ux-parent--mint">
+                <div class="ux-card">
+                    <div class="ux-logo" aria-hidden="true">
+                        <span class="ux-circle"></span><span class="ux-circle"></span><span class="ux-circle"></span><span class="ux-circle"></span>
+                        <span class="ux-circle"><i class='bx bx-code-alt'></i></span>
+                    </div>
+                    <div class="ux-project-img" style="background-image: url('img/project1.webp');"></div>
+                    <div class="ux-glass"></div>
+                    <div class="ux-content">
+                        <span class="ux-title" data-i18n="portfolio.p1.title">Web Design</span>
+                        <span class="ux-text" data-i18n="portfolio.p1.text">Custom website layouts focused on modern aesthetics and responsiveness.</span>
+                    </div>
+                    <div class="ux-bottom">
+                        <div class="ux-social">
+                            <a href="https://github.com/khaled2942" target="_blank" class="ux-social-btn" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+                            <a href="https://www.linkedin.com/in/khaled-omrani-004190349/" target="_blank" class="ux-social-btn" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                        </div>
+                        <div class="ux-more">
+                            <a href="#" class="ux-more-btn" data-i18n="portfolio.view">Open</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="portfolio-box">
-                <img src="img/project2.webp" alt="Project 2">
-                <div class="portfolio-layer">
-                    <h4>UI/UX Design</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
+            <!-- Project 2 (Chamfer Cut - Violet) -->
+            <div class="ux-parent ux-parent--violet ux-parent--cut">
+                <div class="ux-card">
+                    <div class="ux-logo" aria-hidden="true">
+                        <span class="ux-circle"></span><span class="ux-circle"></span><span class="ux-circle"></span><span class="ux-circle"></span>
+                        <span class="ux-circle"><i class='bx bx-crop'></i></span>
+                    </div>
+                    <div class="ux-project-img" style="background-image: url('img/project2.webp');"></div>
+                    <div class="ux-glass"></div>
+                    <div class="ux-content">
+                        <span class="ux-title" data-i18n="portfolio.p2.title">UI/UX Design</span>
+                        <span class="ux-text" data-i18n="portfolio.p2.text">Precision interfaces and usability schemes crafted for optimal workflow.</span>
+                    </div>
+                    <div class="ux-bottom">
+                        <div class="ux-social">
+                            <a href="https://github.com/khaled2942" target="_blank" class="ux-social-btn" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+                            <a href="https://www.linkedin.com/in/khaled-omrani-004190349/" target="_blank" class="ux-social-btn" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                        </div>
+                        <div class="ux-more">
+                            <a href="#" class="ux-more-btn" data-i18n="portfolio.view">Open</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="portfolio-box">
-                <img src="img/project3.webp" alt="Project 3">
-                <div class="portfolio-layer">
-                    <h4>Web Development</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
+            <!-- Project 3 (Neo Surface - Solar) -->
+            <div class="ux-parent ux-parent--solar">
+                <div class="ux-card">
+                    <div class="ux-logo" aria-hidden="true">
+                        <span class="ux-circle"></span><span class="ux-circle"></span><span class="ux-circle"></span><span class="ux-circle"></span>
+                        <span class="ux-circle"><i class='bx bx-code-alt'></i></span>
+                    </div>
+                    <div class="ux-project-img" style="background-image: url('img/project3.webp');"></div>
+                    <div class="ux-glass"></div>
+                    <div class="ux-content">
+                        <span class="ux-title" data-i18n="portfolio.p3.title">Web Development</span>
+                        <span class="ux-text" data-i18n="portfolio.p3.text">Robust backend services and api rails paired with custom clients.</span>
+                    </div>
+                    <div class="ux-bottom">
+                        <div class="ux-social">
+                            <a href="https://github.com/khaled2942" target="_blank" class="ux-social-btn" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+                            <a href="https://www.linkedin.com/in/khaled-omrani-004190349/" target="_blank" class="ux-social-btn" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                        </div>
+                        <div class="ux-more">
+                            <a href="#" class="ux-more-btn" data-i18n="portfolio.view">Open</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+                        </div>
+                    </div>
                 </div>
             </div>
             
-            <div class="portfolio-box">
-                <img src="img/project1.webp" alt="Project 4">
-                <div class="portfolio-layer">
-                    <h4>App Design</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
+            <!-- Project 4 (Cinema Wide - Ocean / Span 2 columns) -->
+            <div class="ux-parent ux-parent--wide ux-parent--ocean ux-parent--span-2">
+                <div class="ux-card">
+                    <div class="ux-logo" aria-hidden="true">
+                        <span class="ux-circle"></span><span class="ux-circle"></span><span class="ux-circle"></span><span class="ux-circle"></span>
+                        <span class="ux-circle"><i class='bx bxl-apple'></i></span>
+                    </div>
+                    <div class="ux-project-img" style="background-image: url('img/project1.webp');"></div>
+                    <div class="ux-glass"></div>
+                    <div class="ux-content">
+                        <span class="ux-title" data-i18n="portfolio.p4.title">App Design</span>
+                        <span class="ux-text" data-i18n="portfolio.p4.text">Interactive dashboard heroes, metrics, and trailers scaled to modern tablet viewports.</span>
+                    </div>
+                    <div class="ux-bottom">
+                        <div class="ux-social">
+                            <a href="https://github.com/khaled2942" target="_blank" class="ux-social-btn" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+                            <a href="https://www.linkedin.com/in/khaled-omrani-004190349/" target="_blank" class="ux-social-btn" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                        </div>
+                        <div class="ux-more">
+                            <a href="#" class="ux-more-btn" data-i18n="portfolio.view">Open</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="portfolio-box">
-                <img src="img/project2.webp" alt="Project 5">
-                <div class="portfolio-layer">
-                    <h4>Web Design</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
+            <!-- Project 5 (Prism Crystal Facet - Prism) -->
+            <div class="ux-parent ux-parent--prism">
+                <div class="ux-card">
+                    <div class="ux-logo" aria-hidden="true">
+                        <span class="ux-circle"></span><span class="ux-circle"></span><span class="ux-circle"></span><span class="ux-circle"></span>
+                        <span class="ux-circle"><i class='bx bx-code-alt'></i></span>
+                    </div>
+                    <div class="ux-project-img" style="background-image: url('img/project2.webp');"></div>
+                    <div class="ux-glass"></div>
+                    <div class="ux-content">
+                        <span class="ux-title" data-i18n="portfolio.p5.title">Web Design</span>
+                        <span class="ux-text" data-i18n="portfolio.p5.text">Creative micro-portfolios with high contrast prismatic styling pass.</span>
+                    </div>
+                    <div class="ux-bottom">
+                        <div class="ux-social">
+                            <a href="https://github.com/khaled2942" target="_blank" class="ux-social-btn" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+                            <a href="https://www.linkedin.com/in/khaled-omrani-004190349/" target="_blank" class="ux-social-btn" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                        </div>
+                        <div class="ux-more">
+                            <a href="#" class="ux-more-btn" data-i18n="portfolio.view">Open</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="portfolio-box">
-                <img src="img/project3.webp" alt="Project 6">
-                <div class="portfolio-layer">
-                    <h4>Web Development</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
+            <!-- Project 6 (Layered Stack - Void) -->
+            <div class="ux-parent ux-parent--void">
+                <div class="ux-card">
+                    <div class="ux-logo" aria-hidden="true">
+                        <span class="ux-circle"></span><span class="ux-circle"></span><span class="ux-circle"></span><span class="ux-circle"></span>
+                        <span class="ux-circle"><i class='bx bx-code-alt'></i></span>
+                    </div>
+                    <div class="ux-project-img" style="background-image: url('img/project3.webp');"></div>
+                    <div class="ux-glass"></div>
+                    <div class="ux-content">
+                        <span class="ux-title" data-i18n="portfolio.p6.title">Web Development</span>
+                        <span class="ux-text" data-i18n="portfolio.p6.text">Single page layers leveraging clean 3D perspective shifts on hover state.</span>
+                    </div>
+                    <div class="ux-bottom">
+                        <div class="ux-social">
+                            <a href="https://github.com/khaled2942" target="_blank" class="ux-social-btn" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+                            <a href="https://www.linkedin.com/in/khaled-omrani-004190349/" target="_blank" class="ux-social-btn" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                        </div>
+                        <div class="ux-more">
+                            <a href="#" class="ux-more-btn" data-i18n="portfolio.view">Open</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section Design -->
-    <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me!</span></h2>
+    <section class="contact section--reveal" id="contact">
+        <h2 class="heading" data-i18n="contact.heading">Contact <span>Me!</span></h2>
 
         <form action="#">
             <div class="input-box">
-                <input type="text" placeholder="Full Name">
-                <input type="email" placeholder="Email Address">
+                <input type="text" placeholder="Full Name" data-i18n-placeholder="contact.name">
+                <input type="email" placeholder="Email Address" data-i18n-placeholder="contact.email">
             </div>
             <div class="input-box">
-                <input type="number" placeholder="Mobile Number">
-                <input type="text" placeholder="Email Subject">
+                <input type="number" placeholder="Mobile Number" data-i18n-placeholder="contact.phone">
+                <input type="text" placeholder="Email Subject" data-i18n-placeholder="contact.subject">
             </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-            <input type="submit" value="Send Message" class="btn">
+            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" data-i18n-placeholder="contact.message"></textarea>
+            <input type="submit" value="Send Message" class="btn" data-i18n-value="contact.send">
         </form>
     </section>
 
     <!-- Footer Design -->
     <footer class="footer">
         <div class="footer-text">
-            <p>Copyright &copy; 2026 by Khaled Omrani | All Rights Reserved.</p>
+            <p data-i18n="footer.copyright">Copyright &copy; 2026 by Khaled Omrani | All Rights Reserved.</p>
         </div>
 
         <div class="footer-iconTop">
